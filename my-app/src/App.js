@@ -1,12 +1,13 @@
 import css from './App.module.css';
 import Sidebar from "./components/Sidebar";
 import StatefulGreeting from './components/StatefulGreeting';
+import StatefulGreetingWithCallback from './components/StatefulGreetingWithCallback';
 
 function App() {
   return (
     <div className={css.App}>
       {/* Add your components here */}
-      <StatefulGreeting greeting="i'm a stateful class component!"
+      <StatefulGreetingWithCallback greeting="i'm a stateful class component!"
        name="Niklas"/>
     </div>
   );

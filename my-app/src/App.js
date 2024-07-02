@@ -1,11 +1,13 @@
 import css from './App.module.css';
-import NestingComponents from './components/NestingComponents';
+import NavBarForm from './components/NavBarForm';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
     <div className={css.App}>
       {/* Add your components here */}
-      <NestingComponents />
+      <NavBarForm />
+      <Sidebar />
     </div>
   );
 }

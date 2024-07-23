@@ -1,12 +1,13 @@
 import css from './App.module.css';
-import LifeCyclesCWU from './components/LifeCyclesCWU';
+import { UncontrolledForm } from './components/UncontrolledForm';
+
 
 
 function App() {
   return (
     <div className={css.App}>
       {/* Add your components here */}
-      <LifeCyclesCWU />
+      <UncontrolledForm/>
     </div>
   );
 }

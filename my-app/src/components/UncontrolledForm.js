@@ -3,34 +3,51 @@ import React, { Component } from 'react'
 export class UncontrolledForm extends Component {
     constructor(props) {
         super(props)
+        this.inputName = React.createRef();
+        this.inputCategory = React.createRef();
+        this.inputComments = React.createRef();
     }
-
     handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        console.log(this.inputName.current.value)
+        console.log(this.inputCategory.current.value)
+        console.log(this.inputComments.current.value)
     }
-
     render() {
         return (
             <div>
-                <h1>Please fill out the form below!</h1>
+                <h2>Please fill out the form below:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <label hrmlFor="id-name">your name:</label>
-                        <input id="id-name" name="name" type="text" />
-
-                        <label hrmlFor="id-category">Query category</label>
+                        <label htmlFor="id-name">Your Name:</label>
+                        <input
+                            id="id-name"
+                            name="name"
+                            type="text"
+                            defaultValue="John Smith"
+                            ref={this.inputName}
+                        />
                     </div>
                     <div>
-                        <select id="id-category" name="category">
-                            <option value="website">Website issiue</option>
-                            <option value="order">Order issiu</option>
-                            <option value="general">General issiu</option>
+                        <label htmlFor="id-category">Query category:</label>
+                        <select
+                            id="id-category"
+                            name="category"
+                            ref={this.inputCategory}
+                        >
+                            <option value="website">Website issue</option>
+                            <option value="order">Order issue</option>
+                            <option value="general">General inquiry</option>
 
                         </select>
                     </div>
                     <div>
-                        <label htmlFor="id-comments">Comments</label>
-                        <textarea id="id-comments" name="comments"/>
+                        <label htmlFor="id-comments">Comments:</label>
+                        <textarea
+                            id="id-comments"
+                            name="comments"
+                            ref={this.inputComments}
+                        />
                     </div>
                     <input type="submit" value="Submit" />
                 </form>

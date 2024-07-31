@@ -1,11 +1,11 @@
 import css from './App.module.css';
-import UseStateWithArrays from './components/UseStateWithArrays';
-
+import HTTPRequest from './components/HTTPRequest';
+import UseEffectCounterContainer from './components/UseEffectCounterContainer';
 
 function App() {
   return (
     <div className={css.App}>
-      <UseStateWithArrays />
+      <HTTPRequest />
     </div>
   );
 }
